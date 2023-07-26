@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_L63_MVC_DBApprch_Master_2623Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAdmin">
+    <Key>
+      <PropertyRef Name="Admin_id" />
+    </Key>
+    <Property Name="Admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Admin_name" Type="varchar" MaxLength="100" />
+    <Property Name="Admin_email" Type="varchar" MaxLength="100" />
+    <Property Name="Admin_password" Type="varchar" MaxLength="100" />
+    <Property Name="Admin_status" Type="int" />
+  </EntityType>
+  <EntityType Name="tblJobRecruiter">
+    <Key>
+      <PropertyRef Name="JobRecruiter_id" />
+    </Key>
+    <Property Name="JobRecruiter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobRecruiter_name" Type="varchar" MaxLength="100" />
+    <Property Name="JobRecruiter_email" Type="varchar" MaxLength="100" />
+    <Property Name="JobRecruiter_password" Type="varchar" MaxLength="100" />
+    <Property Name="JobRecruiter_status" Type="int" />
+  </EntityType>
+  <EntityType Name="tblJobSeeker">
+    <Key>
+      <PropertyRef Name="JobSeeker_id" />
+    </Key>
+    <Property Name="JobSeeker_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobSeeker_name" Type="varchar" MaxLength="100" />
+    <Property Name="JobSeeker_email" Type="varchar" MaxLength="100" />
+    <Property Name="JobSeeker_password" Type="varchar" MaxLength="100" />
+    <Property Name="JobSeeker_status" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUserType">
+    <Key>
+      <PropertyRef Name="UserType_id" />
+    </Key>
+    <Property Name="UserType_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserType_name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="DB_L63_MVC_DBApprch_Master_2623ModelStoreContainer">
+    <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJobRecruiter" EntityType="Self.tblJobRecruiter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJobSeeker" EntityType="Self.tblJobSeeker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserType" EntityType="Self.tblUserType" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

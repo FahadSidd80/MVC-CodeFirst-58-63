@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_MVC_L59_CRUD_RZR_BS_Code_31523", "WebApp_MVC_L59_CRUD_RZR_BS_Code_31523\WebApp_MVC_L59_CRUD_RZR_BS_Code_31523.csproj", "{09CFBB48-43E8-478E-A59C-3846BD04C51E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09CFBB48-43E8-478E-A59C-3846BD04C51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CFBB48-43E8-478E-A59C-3846BD04C51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CFBB48-43E8-478E-A59C-3846BD04C51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CFBB48-43E8-478E-A59C-3846BD04C51E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E8BF69-7A40-41E5-8C81-E3B16CB22BD6}
+	EndGlobalSection
+EndGlobal

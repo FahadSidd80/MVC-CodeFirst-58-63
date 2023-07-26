@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_L63_MVC_DBApprch_Master_2623Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Admin_name" Type="varchar" MaxLength="100" />
+          <Property Name="Admin_email" Type="varchar" MaxLength="100" />
+          <Property Name="Admin_password" Type="varchar" MaxLength="100" />
+          <Property Name="Admin_status" Type="int" />
+        </EntityType>
+        <EntityType Name="tblJobRecruiter">
+          <Key>
+            <PropertyRef Name="JobRecruiter_id" />
+          </Key>
+          <Property Name="JobRecruiter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobRecruiter_name" Type="varchar" MaxLength="100" />
+          <Property Name="JobRecruiter_email" Type="varchar" MaxLength="100" />
+          <Property Name="JobRecruiter_password" Type="varchar" MaxLength="100" />
+          <Property Name="JobRecruiter_status" Type="int" />
+        </EntityType>
+        <EntityType Name="tblJobSeeker">
+          <Key>
+            <PropertyRef Name="JobSeeker_id" />
+          </Key>
+          <Property Name="JobSeeker_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobSeeker_name" Type="varchar" MaxLength="100" />
+          <Property Name="JobSeeker_email" Type="varchar" MaxLength="100" />
+          <Property Name="JobSeeker_password" Type="varchar" MaxLength="100" />
+          <Property Name="JobSeeker_status" Type="int" />
+        </EntityType>
+        <EntityType Name="tblUserType">
+          <Key>
+            <PropertyRef Name="UserType_id" />
+          </Key>
+          <Property Name="UserType_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserType_name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="DB_L63_MVC_DBApprch_Master_2623ModelStoreContainer">
+          <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblJobRecruiter" EntityType="Self.tblJobRecruiter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblJobSeeker" EntityType="Self.tblJobSeeker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserType" EntityType="Self.tblUserType" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_L63_MVC_DBApprch_Master_2623Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAdmin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Admin_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Admin_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Admin_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Admin_status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblJobRecruiter">
+          <Key>
+            <PropertyRef Name="JobRecruiter_id" />
+          </Key>
+          <Property Name="JobRecruiter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobRecruiter_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobRecruiter_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobRecruiter_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobRecruiter_status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblJobSeeker">
+          <Key>
+            <PropertyRef Name="JobSeeker_id" />
+          </Key>
+          <Property Name="JobSeeker_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobSeeker_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobSeeker_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobSeeker_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JobSeeker_status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblUserType">
+          <Key>
+            <PropertyRef Name="UserType_id" />
+          </Key>
+          <Property Name="UserType_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserType_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DatabaseContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAdmins" EntityType="Self.tblAdmin" />
+          <EntitySet Name="tblJobRecruiters" EntityType="Self.tblJobRecruiter" />
+          <EntitySet Name="tblJobSeekers" EntityType="Self.tblJobSeeker" />
+          <EntitySet Name="tblUserTypes" EntityType="Self.tblUserType" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_L63_MVC_DBApprch_Master_2623ModelStoreContainer" CdmEntityContainer="DatabaseContext">
+          <EntitySetMapping Name="tblAdmins">
+            <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblAdmin">
+              <MappingFragment StoreEntitySet="tblAdmin">
+                <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+                <ScalarProperty Name="Admin_name" ColumnName="Admin_name" />
+                <ScalarProperty Name="Admin_email" ColumnName="Admin_email" />
+                <ScalarProperty Name="Admin_password" ColumnName="Admin_password" />
+                <ScalarProperty Name="Admin_status" ColumnName="Admin_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblJobRecruiters">
+            <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblJobRecruiter">
+              <MappingFragment StoreEntitySet="tblJobRecruiter">
+                <ScalarProperty Name="JobRecruiter_id" ColumnName="JobRecruiter_id" />
+                <ScalarProperty Name="JobRecruiter_name" ColumnName="JobRecruiter_name" />
+                <ScalarProperty Name="JobRecruiter_email" ColumnName="JobRecruiter_email" />
+                <ScalarProperty Name="JobRecruiter_password" ColumnName="JobRecruiter_password" />
+                <ScalarProperty Name="JobRecruiter_status" ColumnName="JobRecruiter_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblJobSeekers">
+            <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblJobSeeker">
+              <MappingFragment StoreEntitySet="tblJobSeeker">
+                <ScalarProperty Name="JobSeeker_id" ColumnName="JobSeeker_id" />
+                <ScalarProperty Name="JobSeeker_name" ColumnName="JobSeeker_name" />
+                <ScalarProperty Name="JobSeeker_email" ColumnName="JobSeeker_email" />
+                <ScalarProperty Name="JobSeeker_password" ColumnName="JobSeeker_password" />
+                <ScalarProperty Name="JobSeeker_status" ColumnName="JobSeeker_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserTypes">
+            <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblUserType">
+              <MappingFragment StoreEntitySet="tblUserType">
+                <ScalarProperty Name="UserType_id" ColumnName="UserType_id" />
+                <ScalarProperty Name="UserType_name" ColumnName="UserType_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApp_MVC_L63_DB_Apprch_Mstr_2623.Models.tblJobRecruiter>
+
+@{
+    ViewBag.Title = "RecruiterHome";
+}
+
+<h2>Recruiter Home</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobRecruiter_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobRecruiter_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobRecruiter_password)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.JobRecruiter_status)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobRecruiter_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobRecruiter_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobRecruiter_password)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.JobRecruiter_status)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JobRecruiter_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JobRecruiter_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JobRecruiter_id })
+        </td>
+    </tr>
+}
+
+</table>

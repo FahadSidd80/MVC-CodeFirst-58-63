@@ -1,0 +1,26 @@
+﻿@model  IEnumerable<WebApp_MVC_L57_Code_31523.Models.tblEmployee>
+    @*tblemployee hold data first  tblEmployee is model and can hold only one record*@
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display Employee Records</h2>
+<table style="background-color:forestgreen;color:black;width:750px">
+    <tr style="background-color:black;color:white">
+        <th>Emp ID</th>
+        <th>Emp Name</th>
+        <th>Emp Age</th>
+        <th>Emp City</th>
+    </tr>
+    @foreach (var a in Model) { 
+        <tr>
+            <td>@a.ID</td>
+            <td>@a.Name</td>
+            <td>@a.Age</td>
+            <td>@a.City</td>
+        </tr>
+    }
+
+</table>
+
+

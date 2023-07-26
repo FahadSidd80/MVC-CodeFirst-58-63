@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApp_MVC_L58_CodeBoot_31523.Models.tblEmployee>
+@*By using IEnumerable we are making collection of tblemployee model so that it can hold multiple records*@
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+<table style="background-color:forestgreen;color:black;width:750px">
+    <tr style="background-color:black;color:white">
+        @*<th>Emp ID</th>
+        <th>Emp Name</th>
+        <th>Emp City</th>
+        <th>Emp Salary</th>*@
+        <th>@Html.DisplayNameFor(a => a.Id)</th>
+        <th>@Html.DisplayNameFor(a => a.Name)</th>
+        <th>@Html.DisplayNameFor(a => a.City)</th>
+        <th>@Html.DisplayNameFor(a => a.Salary)</th>
+    </tr>
+    @foreach (var a in Model)
+    {
+        <tr>
+            <td>@a.Id</td>
+            <td>@a.Name</td>
+            <td>@a.City</td>
+            <td>@a.Salary</td>
+           
+        </tr>
+    }
+
+</table>
+

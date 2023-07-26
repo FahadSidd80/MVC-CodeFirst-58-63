@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_L63_MVC_DBApprch_Master_2623ModelStoreContainer" CdmEntityContainer="DatabaseContext">
+    <EntitySetMapping Name="tblAdmins">
+      <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblAdmin">
+        <MappingFragment StoreEntitySet="tblAdmin">
+          <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+          <ScalarProperty Name="Admin_name" ColumnName="Admin_name" />
+          <ScalarProperty Name="Admin_email" ColumnName="Admin_email" />
+          <ScalarProperty Name="Admin_password" ColumnName="Admin_password" />
+          <ScalarProperty Name="Admin_status" ColumnName="Admin_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJobRecruiters">
+      <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblJobRecruiter">
+        <MappingFragment StoreEntitySet="tblJobRecruiter">
+          <ScalarProperty Name="JobRecruiter_id" ColumnName="JobRecruiter_id" />
+          <ScalarProperty Name="JobRecruiter_name" ColumnName="JobRecruiter_name" />
+          <ScalarProperty Name="JobRecruiter_email" ColumnName="JobRecruiter_email" />
+          <ScalarProperty Name="JobRecruiter_password" ColumnName="JobRecruiter_password" />
+          <ScalarProperty Name="JobRecruiter_status" ColumnName="JobRecruiter_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJobSeekers">
+      <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblJobSeeker">
+        <MappingFragment StoreEntitySet="tblJobSeeker">
+          <ScalarProperty Name="JobSeeker_id" ColumnName="JobSeeker_id" />
+          <ScalarProperty Name="JobSeeker_name" ColumnName="JobSeeker_name" />
+          <ScalarProperty Name="JobSeeker_email" ColumnName="JobSeeker_email" />
+          <ScalarProperty Name="JobSeeker_password" ColumnName="JobSeeker_password" />
+          <ScalarProperty Name="JobSeeker_status" ColumnName="JobSeeker_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserTypes">
+      <EntityTypeMapping TypeName="DB_L63_MVC_DBApprch_Master_2623Model.tblUserType">
+        <MappingFragment StoreEntitySet="tblUserType">
+          <ScalarProperty Name="UserType_id" ColumnName="UserType_id" />
+          <ScalarProperty Name="UserType_name" ColumnName="UserType_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

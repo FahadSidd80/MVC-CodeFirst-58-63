@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApp_MVC_L60_Join_DD_31523.Models.Join>
+
+@{
+    ViewBag.Title = "RegistrationDisplay";
+}
+
+
+
+@*<h2>RegistrationDisplay</h2>*@
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table" style="background-color:lightgreen;color:black">
+
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.rid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Countryname)
+        </th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:black;color:white">
+            <td>
+                @Html.DisplayFor(modelItem => item.rid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Countryname)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "RegistrationForm", new { id = item.rid })
+                @*@Html.ActionLink("Details", "Details", new { id=item.rid }) |*@
+
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.rid })
+            </td>
+        </tr>
+    }
+
+</table>

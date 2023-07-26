@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_L63_MVC_DBApprch_Master_2623Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAdmin">
+    <Key>
+      <PropertyRef Name="Admin_id" />
+    </Key>
+    <Property Name="Admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Admin_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Admin_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Admin_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Admin_status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblJobRecruiter">
+    <Key>
+      <PropertyRef Name="JobRecruiter_id" />
+    </Key>
+    <Property Name="JobRecruiter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobRecruiter_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobRecruiter_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobRecruiter_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobRecruiter_status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblJobSeeker">
+    <Key>
+      <PropertyRef Name="JobSeeker_id" />
+    </Key>
+    <Property Name="JobSeeker_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobSeeker_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobSeeker_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobSeeker_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobSeeker_status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblUserType">
+    <Key>
+      <PropertyRef Name="UserType_id" />
+    </Key>
+    <Property Name="UserType_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserType_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAdmins" EntityType="Self.tblAdmin" />
+    <EntitySet Name="tblJobRecruiters" EntityType="Self.tblJobRecruiter" />
+    <EntitySet Name="tblJobSeekers" EntityType="Self.tblJobSeeker" />
+    <EntitySet Name="tblUserTypes" EntityType="Self.tblUserType" />
+  </EntityContainer>
+</Schema>
